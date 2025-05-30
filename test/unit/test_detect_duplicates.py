@@ -48,7 +48,7 @@ def test_pairwise_duplicates(entries, expected_keys):
 
 @pytest.mark.unit
 def test_three_entries_single_duplicate():
-    """TC-8: Three entries with key A twice should yield one duplicate."""
+    """TC-8: Three entries with key A twice flags only one duplicate."""
     entries = [("A", None), ("B", None), ("A", None)]
     data = make_bib(entries)
     result = detect_duplicates(data)
